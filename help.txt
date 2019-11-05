@@ -1,0 +1,50 @@
+
+-h          : Open this help menu
+────────────────────────────────────────────────────────────────────────────────
+-ao         : Activates all output override
+		 -Overrides periodicity, flip_read, and complement_strand
+		 -Produces outputs for every True/False combination of these
+		 -Can be incredibly slow
+────────────────────────────────────────────────────────────────────────────────
+-c          : Activates complementary strand production
+		 -Converts input data strand to complementary strand
+		 -Outputted data files will use this complementary strand
+────────────────────────────────────────────────────────────────────────────────
+-r	    : Activates flipped reversed nucleotide reading
+		 -Reverses order of input nucleotide sequence
+		 -Outputted data files will use the reversed sequence
+────────────────────────────────────────────────────────────────────────────────
+-f [path]   : Defines input file location
+		 -Should be followed with a valid file path to a folder
+		 -Data files will then be pulled from this folder
+────────────────────────────────────────────────────────────────────────────────
+-o [path]   : Defines output location
+		 -Should be followed with a valid file path to a folder
+		 -Data files will then be outputted to this folder
+────────────────────────────────────────────────────────────────────────────────
+-t [a/i/ai] : Defines the output type
+		 -Should be followed by either a, i, or ai as an argument
+		 -a outputs data files for an average across every inputted scale
+		 -i outputs data files for each individual scale
+		 -ai outputs data files for averaged and individual scales
+────────────────────────────────────────────────────────────────────────────────
+-p 	    : Activates periodicity assumption
+		 -Assumes sequence repeats and wraps averaging windows
+		 -Allows slightly more points to be plotted
+────────────────────────────────────────────────────────────────────────────────
+-s	    : Defines scale file location
+		 -Should be followed with a valid file path to a folder
+		 -Scale files will then be pulled from this folder
+────────────────────────────────────────────────────────────────────────────────
+-ss 	    : Defines the step size if window averaging is enabled
+		 -Defines the 'steps' between different window sizes sampled
+		 -Should be followed by an even integer value
+────────────────────────────────────────────────────────────────────────────────
+-wa 	    : Activates window averaging
+		 -Produces outputs for different averaging window sizes
+		 -Also produces an output file with averages across all sizes
+		 -Window sizes used will be the defined down to 3
+────────────────────────────────────────────────────────────────────────────────
+-ws	    : Defines the size of the averaging window
+		 -Should be followed by an odd integer value
+		 -Will be treated as the maximum if the -wa argument is present
